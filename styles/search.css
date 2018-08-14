@@ -1,0 +1,31 @@
+.search{
+  background-color:white;
+  width:calc(100% - calc(var(--sides) * 2));
+  margin:auto;
+  border-radius:0 0 15px 15px;
+  border:solid black 3px;
+  border-top-style:none;
+}
+.search input[type=text]{
+  border-style:none;
+  font-size:30px;
+  margin:10px 0 10px 0;
+  position:relative;
+  width:calc(100% - 66px);
+}
+.search img{
+  background-color:#ff0323;
+  float:right;
+  border-radius:100%;
+  transform:translateY(calc(50% - 18%));
+}
+
+.search span{
+  display:inline-block;
+}
+.search span:first-of-type{
+  width:calc(100% - 50px);
+}
+.search span:last-of-type{
+  width:45px;
+}

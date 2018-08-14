@@ -1,0 +1,24 @@
+:root{
+  --gray:#c4c4c4;
+  --sides:8%;
+}
+body{
+  font-family:sans-serif;
+  color:#383838;
+  margin:0;
+}
+.sideline{
+  background-color:#ff0323;
+  position:fixed;
+  height:100%;
+  width:15px;
+  left:0;
+  top:0;
+}
+
+.result-space{
+  --pad:2%;
+  margin:auto;
+  width:calc(100% - calc(calc(var(--sides) + var(--pad)) * 2));
+  padding:35px var(--pad) 0;
+}

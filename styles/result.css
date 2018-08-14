@@ -1,0 +1,30 @@
+.result{
+  --border:15px;
+  background-color:var(--gray);
+  border-radius:15px;
+  margin-bottom:25px;
+  padding:var(--border);
+  border-left:solid var(--border) var(--color);
+}
+.result label{
+  font-weight:bold;
+  color:var(--color);
+}
+.result h1{
+  display:inline;
+}
+
+.result .data{
+  display:inline-block;
+  position:relative;
+  width:50%;
+}
+.result .image{
+  text-align:right;
+  float:right;
+}
+.result .icon{
+  margin-left:15px;
+  height:75px;
+  width:auto;
+}
