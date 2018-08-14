@@ -1,6 +1,6 @@
 const toolbox={
   LIVE_URL:"//alugocp.pythonanywhere.com",
-  TEST_URL:"//localhost:2021",
+  TEST_URL:"http://localhost:2021",
 
   request:function(query,callback){
     $.get(toolbox.LIVE_URL,"json="+JSON.stringify(query),function(data){
@@ -42,8 +42,9 @@ const toolbox={
   },
   welcome:function(){
     var result=$("<div class='result'></div>").attr("style","--color:#ff0323;text-align:center;");
-    result.append("<h2>Alex Lugo presents:</h2>","<img src=\"media/toolbox.png\">","<br>");
-    result.append("<h3>An online repository for all my developer tools</h3>")
+    result.append("<h2>Alex Lugo presents:</h2>","<br>","<h2><img src=\"media/toolbox.png\"> v1.0</h2>","<br>");
+    result.append("<h3>An online repository for all my developer tools</h3>");
+    result.append("<h3>Search for any tool by name or leave the search bar blank to load every result</h3>");
     return result;
   }
 }
