@@ -1,8 +1,6 @@
 const toolbox={
-  LIVE_URL:"http://alugocp.pythonanywhere.com",
-  TEST_URL:"http://localhost:2021",
-  THREE_MONTHS:2628000,
-  ONE_HOUR:3600,
+  LIVE_URL:"//alugocp.pythonanywhere.com",
+  TEST_URL:"//localhost:2021",
 
   request:function(query,callback){
     $.get(toolbox.LIVE_URL,"json="+JSON.stringify(query),function(data){

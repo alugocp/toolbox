@@ -5,7 +5,5 @@ $(document).ready(function(){
   $(".search .trigger").click(function(){
     toolbox.getData({term:$(".search input[type=text]").val().toLowerCase()});
   });
-  //toolbox.getData({date:toolbox.THREE_MONTHS});
   $(".result-space").empty().append(toolbox.welcome());
-  //toolbox.getData({term:"lodr"});
 });
