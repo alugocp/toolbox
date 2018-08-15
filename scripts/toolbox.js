@@ -5,6 +5,8 @@ const toolbox={
   request:function(query,callback){
     $.get(toolbox.LIVE_URL,"json="+JSON.stringify(query),function(data){
       callback(data);
+    }).fail(function(){
+      $(".result-space").empty().append(toolbox.error());
     });
   },
   getData:function(search){
@@ -42,9 +44,13 @@ const toolbox={
   },
   welcome:function(){
     var result=$("<div class='result'></div>").attr("style","--color:#ff0323;text-align:center;");
-    result.append("<h2>Alex Lugo presents:</h2>","<br>","<h2><img src=\"media/toolbox.png\"> v1.0</h2>","<br>");
+    result.append("<h2>Alex Lugo presents:</h2>","<br>","<h2><img src=\"media/toolbox.png\" style=\"width:60%;height:auto;\"> v1.0</h2>","<br>");
     result.append("<h3>An online repository for all my developer tools</h3>");
     result.append("<h3>Search for any tool by name or leave the search bar blank to load every result</h3>");
     return result;
+  },
+  error:function(){
+    var result=$("<div class='result'></div>").attr("style","--color:#ff0323;text-align:center;");
+    return result.append("<h2><label>Uh-Oh</label></h2>","<h3>It seems there was an error</h3>","<h3>The Toolbox server could not be reached</h3>");
   }
 }

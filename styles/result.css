@@ -1,5 +1,6 @@
 .result{
   --border:15px;
+  position:relative;
   background-color:var(--gray);
   border-radius:15px;
   margin-bottom:25px;
@@ -20,8 +21,18 @@
   width:50%;
 }
 .result .image{
+  width:calc(50% - var(--border));
+  position:absolute;
   text-align:right;
   float:right;
+  height:100%;
+  top:0;
+}
+.result .image img{
+  position:relative;
+  max-height:50%;
+  max-width:80%;
+  top:25%;
 }
 .result .icon{
   margin-left:15px;
