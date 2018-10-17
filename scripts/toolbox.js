@@ -10,10 +10,15 @@ const toolbox={
     });
   },
   getData:function(search){
+    $(".sideline").stop(true);
+    $(".sideline").height("0%");
+    $(".sideline").animate({height:"80%"},1000);
     toolbox.request(search,function(data){
       $(".result-space").empty();
       var json=JSON.parse(data);
       for(var a=0;a<json.length;a++) $(".result-space").append(toolbox.result(json[a]));
+      $(".sideline").stop(true);
+      $(".sideline").height("100%");
     });
   },
   getImage:function(target,name){
@@ -50,7 +55,9 @@ const toolbox={
     return result;
   },
   error:function(){
-    var result=$("<div class='result'></div>").attr("style","--color:#ff0323;text-align:center;");
-    return result.append("<h2><label>Uh-Oh</label></h2>","<h3>It seems there was an error</h3>","<h3>The Toolbox server could not be reached</h3>");
+    $(".sideline").stop(true);
+    return $("<div class='result'></div>")
+      .attr("style","--color:#ff0323;text-align:center;")
+      .append("<h2><label>Uh-Oh</label></h2>","<h3>It seems there was an error</h3>","<h3>The Toolbox server could not be reached</h3>");
   }
 }
