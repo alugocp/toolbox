@@ -12,6 +12,7 @@
   margin:10px 0 10px 0;
   position:relative;
   width:calc(100% - 66px);
+  padding-left:10px;
 }
 .search img{
   background-color:#ff0323;
